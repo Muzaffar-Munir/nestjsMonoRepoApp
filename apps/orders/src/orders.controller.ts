@@ -7,10 +7,9 @@ export class OrdersController {
   constructor(private readonly ordersService: OrdersService) {}
 
   @Get()
-  async getHello() {
+  async getOrders() {
     return this.ordersService.getOrders();
   }
-  // tes
 
   @Post()
   async createOrder(@Body() request: CreateOrderRequest) {
